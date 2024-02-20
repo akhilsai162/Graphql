@@ -1,0 +1,122 @@
+@import '../../styles/mediaQueries.mixin.scss';
+
+body {
+    margin: 0;
+    background: linear-gradient(45deg, #49a09d, #5f2c82);
+    background-attachment: fixed;
+
+    @include for-phone {
+        background-attachment: fixed;
+    }
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+	font-size: 4rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-family: "Josefin Sans", sans-serif;
+	background: linear-gradient(to right,#095fab 10%, #25abe8 50%, #57d75b 60%);
+	background-clip: border-box;
+	background-size: 200% auto;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: textclip 1.5s linear infinite;
+
+    @keyframes textclip {
+        to {
+            background-position: 200% ;
+        }
+    }
+}
+
+.dropdownBox {
+    text-align: center;
+    margin-bottom: 2rem;
+
+    select.selectDropdown {
+        font-size: 1.1rem;
+        background: transparent;
+        width: 20%;
+        border-radius: 7px;
+        padding: 5px;
+        color: white;
+        outline: none;
+        box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+    
+        option#seleced-value {
+            color: black;
+        }
+    }
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    table, th, td {
+        border-collapse: collapse;
+        padding: 8px;
+        table-layout: fixed;
+        width: 80%;
+        color: white;
+    
+        th {
+            text-align: left;
+            background-color: #55608f;
+            font-size: 1.4rem;
+
+            @include for-phone {
+               font-size: 1rem; 
+            }
+
+            @include for-tablet {
+                font-size: 1rem;
+            }
+        }
+
+        @include for-phone {
+            width: 95%;
+            word-break: break-all;
+            .s-no, .code {
+                display: none;
+            } 
+        }
+
+        @include for-tablet {
+            width: 95%;
+            word-break: break-all;
+            .s-no {
+                display: none;
+            }
+        }
+
+        @include for-tablet-landscape {
+            width: 90%;
+            
+        }
+    
+        tbody tr td {
+            background-color: rgba(255,255,255,0.2);
+        }
+
+        td.flagpic {
+            font-size: 1.5rem;
+        }
+    
+        tbody tr:hover {
+            background-color: rgba(255,255,255,0.2);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+@mixin for-phone {
+    @media(max-width:450px) {
+        @content;
+    } 
+}
+
+@mixin for-tablet {
+    @media(min-width:451px) and (max-width:750px) {
+        @content;
+    } 
+}
+
+@mixin for-tablet-landscape {
+    @media(min-width:751px) and (max-width:1024px) {
+        @content;
+    } 
+}
